@@ -1,4 +1,4 @@
-import React, {useState, MouseEvent} from 'react'
+import React, {useState} from 'react'
 import './App.css'
 import {NewComponent} from "./NewComponent.tsx";
 import {Cars} from "./TopCars.tsx";
@@ -14,7 +14,7 @@ function App() {
         {id: 7, name: 'Renata', age: 35}
     ]);
 
-    const [topCars, setTopCars] = useState([
+    const [topCars, setTopCars] = React.useState([
         {manufacturer: 'BMW', model: 'm5cs'},
         {manufacturer: 'Mercedes', model: 'e63s'},
         {manufacturer: 'Audi', model: 'rs6'}
@@ -35,9 +35,9 @@ function App() {
             <Cars topCars={topCars} />
             <NewComponent students={students} />
             {/*<button onClick={(event) => { console.log('hello')} }>MyYouTubeChanel-1</button>*/}
-            <button onClick={event:MouseEvent<HTMLButtonElement>) => onClickHandler(name: 'vasya')}>MyYouTubeChanel-1</button>
-            <button onClick={event:MouseEvent<HTMLButtonElement>) => onClickHandler(name: 'ivan')}>MyYouTubeChanel-2</button>
-            <button onClick={() =>onClickHandler(name: 'some info')}>MyYouTubeChanel-3</button>
+            <button onClick={() => onClickHandler('vasya')}>MyYouTubeChanel-1</button>
+            <button onClick={() => onClickHandler('ivan')}>MyYouTubeChanel-2</button>
+            <button onClick={() =>onClickHandler('some info')}>MyYouTubeChanel-3</button>
         </div>
     )
 }
